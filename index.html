@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta lang="pt-br">
+<meta charset="UTF-8">
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/fale_conosco.css">
+    <SCript>
+
+        function fechaDivResultado() {
+            var divresultado = document.getElementById("div-resultado");
+            divresultado.style = "display:none"
+        }
+
+
+        function ProcessaForm() {
+
+            var nome = document.getElementById("nome");
+            var sobrenome = document.getElementById("sobrenome");
+            var cpf = document.getElementById("cpf");
+            var celular = document.getElementById("celular");
+            var Email = document.getElementById("Email");
+            var senha = document.getElementById("senha");
+            var repita_senha = document.getElementById("repita_senha");
+            console.log("nome " + nome.value)
+            console.log("sobrenome " + sobrenome.value)
+            console.log("cpf " + cpf.value)
+            console.log("celular " + celular.value)
+            console.log("Email " + Email.value)
+            console.log("senha " + senha.value)
+            console.log("repita_senha " + repita_senha.value)
+
+            var divresultado = document.getElementById("div-resultado");
+            divresultado.innerHTML =
+                "<div>" +
+                "<div onclick='fechaDivResultado();'>X</div>" +
+                "<div>nome:" + nome.value + "</div>" +
+                "<div>sobrenome:" + sobrenome.value + "</div>" +
+                "<div>cpf:" + cpf.value + "</div>" +
+                "<div>celular:" + celular.value + "</div>" +
+                "<div>email:" + Email.value + "</div>" +
+                "<div>senha:" + senha.value + "</div>" +
+                "<div>repita_senha:" + repita_senha.value + "</div>" +
+                "</div>";
+            divresultado.style = "display:block"
+        }
+    </SCript>
+
+    <title>Melhor Amigo Clínica Veterinária</title>
+
+</head>
+
+<body>
+    <header>
+        <img src="logomarca3.jpg" type="logo" id="logomarca">
+        <h1>Melhor Amigo Clínica Veterinária</h1>
+        <nav>
+            <ul>
+                <li><a href="servicos.html">Nossos serviços</a></li>
+                <li><a href="contato.html">Fale conosco</a></li>
+                <li><a href="sobre.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <H2>Na Melhor Amigo Clínica Veterinária,
+        acreditamos que cada pet merece cuidado, carinho e atenção especial.
+        Oferecemos consultas, cirurgias e serviços de banho e tosa
+        para garantir a saúde e o bem-estar dos seus melhores amigos
+        de quatro patas.</H2>
+    <img src="img/homevet.jpg" style="width: 42%;" alt="uma ilustração de vários animais.">
+    <div>
+        <h3>Cadastre-se em nosso site!</h3>
+        <h5>Ao terminar de preencher o formulário, clique no "X" para remover as confirmações de resposta!</h5>
+        <form action="#">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
+            <br>
+            <label for="Sobrenome">Sobrenome</label>
+            <input type="text" id="sobrenome" name="sobrenome">
+            <br>
+            <label for="cpf">cpf</label>
+            <input type="text" id="cpf" name="cpf">
+            <br>
+            <label for="celular">Telefone para contato</label>
+            <input type="tel" id="celular" name="celular" pattern="[0-9]{2}[0-9]{1}[0-9]{4}[0-9]{4}">
+            <br>
+            <label for="Email">E-mail</label>
+            <input type="email" id="Email" name="Email">
+            <br>
+
+            <label for="senha">Cadastre uma senha</label>
+            <input type="password" id="senha" name="senha">
+            <br>
+            <label for="repita_senha">repita sua senha</label>
+            <input type="password" id="repita_senha" name="repita_senha">
+            <br>
+            <button type="button" onclick="ProcessaForm()">Finalizar</button>
+
+        </form>
+    </div>
+    <div id="div-resultado" style="display: none;">
+        <p>Cadastro não Efetuado</p>
+    </div>
+    <h3>Consultas</h3>
+    <p>Atendimento geral e especializado para cães e gatos.</p>
+    <a href="servicos.html">Saiba mais</a>
+
+    <h3>Cirurgias</h3>
+    <p>Procedimentos realizados com segurança e equipe experiente.</p>
+    <a href="servicos.html">Saiba mais</a>
+
+    <h3>Banho e Tosa</h3>
+    <p>Serviço de higiene completo com carinho e cuidado.</p>
+    <a href="servicos.html">Saiba mais</a>
+
+    <footer>
+        <p>Este site é um trabalho da disciplina <strong>Programação Web 1</strong>
+            do segundo período do curso de <strong>Sistemas de Informação</strong> da Doctum.</p>
+        <p>&copy; 2025 - Rodrigo de Oliveira - Mateus Silva - Lucas Garcia - Lucas de Matos</p>
+    </footer>
+</body>
+
+</html>
